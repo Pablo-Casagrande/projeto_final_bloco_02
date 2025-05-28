@@ -39,8 +39,12 @@ import jakarta.validation.constraints.Size;
 		private String descricao;
 		
 		@ManyToOne
-	    @JsonIgnoreProperties("produtos")
+	    @JsonIgnoreProperties("produto")
 	    private Categoria categoria;
+
+	    @ManyToOne
+	    @JsonIgnoreProperties("produto")
+	    private Usuario usuario;
 
 		public Long getId() {
 			return id;
